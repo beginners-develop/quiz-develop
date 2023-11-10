@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<!-- begin::Head -->
+<head>
+    <th:block th:insert="fragments :: head/meta"></th:block>
+    <th:block th:insert="fragments :: head/link"></th:block>
+
+    <!--begin::Page Custom Styles(used by this page) -->
+    <link th:href="@{/css/pages/wizard/wizard-4.css}" rel="stylesheet" type="text/css"/>
+    <!--end::Page Custom Styles -->
+    <title>Quiz | Create Quiz</title>
+</head>
+<!-- end::Head -->
+
+<!-- begin::Body -->
+<body th:style="'background-image: url(' + @{/media/demos/demo8/bg-1.jpg} + ');'"
+      class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--enabled kt-subheader--transparent kt-page--loading">
+
+<!-- begin:: Page -->
+
+<!-- begin:: Header Mobile -->
+<th:block th:insert="fragments :: header-mobile"></th:block>
+<!-- begin:: Header Mobile -->
+
+<div class="kt-grid kt-grid--hor kt-grid--root">
+    <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
+        <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper">
+
+            <!-- begin:: Header -->
+            <th:block th:insert="fragments :: header"></th:block>
+            <!-- begin:: Header -->
+
+            <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-grid--stretch">
+                <div class="kt-body kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-grid--stretch"
+                     id="kt_body">
+                    <div class="kt-content  kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_content">
+
+                        <!-- begin:: Subheader -->
+                        <div class="kt-subheader   kt-grid__item" id="kt_subheader">
+                            <div class="kt-container  kt-container--fluid ">
+                                <div class="kt-subheader__main">
+                                    <h3 class="kt-subheader__title">
+                                        Timing remaining:
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end:: Subheader -->
+
+                        <!-- begin:: Content -->
+                        <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+                            <div class="kt-wizard-v4" id="kt_wizard_v4" data-ktwizard-state="step-first">
+                                <!--begin: Form Wizard Nav -->
+                                <div class="kt-section d-flex justify-content-between">
+                                    <div class="display-4">
+                                        <i class="flaticon2-time"> <span id="clock"></span></i>
+                                    </div>
+
+                                    <!--begin: Pagination-->
+                                    <div class="kt-pagination  kt-pagination--brand">
+                                        <ul class="kt-pagination__links" id="btn-linked">
+                                            <th:block th:each="question, status : ${quiz?.listQuestion}">
+                                            <li th:class="${status.count == 1 ? 'kt-pagination__link--active' : ''}" th:data-id="${status.count}" data-ktwizard-type="step" data-ktwizard-state="current">
+                                                <a href="javascript:;" class="kt-wizard-v4__nav-number">[[${status.count}]]</a>
+                                            </li>
+                                            </th:block>
+                                        </ul>
+                                    </div>
+                                    <!--end: Pagination-->
+                                </div>
+
+                                <!--end: Form Wizard Nav -->
+                                <div class="kt-portlet">
+                                    <div class="kt-portlet__body kt-portlet__body--fit">
+                                        <div class="kt-grid">
+                                            <div class="kt-grid__item kt-grid__item--fluid kt-wizard-v4__wrapper">
+                                                <!--begin: Form Wizard Form-->
+                                                <form class="kt-form" id="kt_form">
+                                                    <div class="kt-heading kt-heading--md text-center text-info" style="font-size: 3rem">[[${quiz?.quizName}]]</div>
+                                                    <input type="hidden" id="quizId" th:value="${quiz?.quizId}">
+                                                    <input type="hidden" id="userId" th:value="${memberObject?.id}">
+                                                    <th:block th:each="question, status : ${quiz?.listQuestion}">
+                                                    <div class="kt-wizard-v4__content" data-ktwizard-type="step-content" data-ktwizard-state="current">
+                                                        <input type="hidden" th:class="btn-active_ + ${status.count}" th:value="${status.count}">
+                                                        <div class="kt-heading kt-heading--md">[[${question?.question}]]</div>
+                                                        <div class="row">
+                                                            <input type="hidden" class="questionId" th:value="${question?.id}">
+                                                            <div class="col-lg-6" th:each="answer : ${question?.answerDTOS}">
+                                                                <label class="kt-option">
+                                                                    <span class="kt-option__control">
+                                                                        <span class="kt-radio">
+                                                                            <input type="radio" class="answer" th:name="'question_' + ${question?.id}" th:value="${answer?.id}">
+                                                                            <span></span>
+                                                                        </span>
+																		</span>
+                                                                    <span class="kt-option__label">
+                                                                        <span class="kt-option__head">
+                                                                            <span class="kt-option__title">
+                                                                                [[${answer?.answer}]]
+                                                                            </span>
+                                                                        </span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    </th:block>
+
+                                                    <!--begin: Form Actions -->
+                                                    <div class="kt-form__actions">
+                                                        <button class="btn btn-secondary btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" id="previous" data-ktwizard-type="action-prev">
+                                                            Previous
+                                                        </button>
+                                                        <button class="btn btn-success btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" id="submitQuiz" data-ktwizard-type="action-submit">
+                                                            Submit
+                                                        </button>
+                                                        <button class="btn btn-brand btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" id="next" data-ktwizard-type="action-next">
+                                                            Next
+                                                        </button>
+                                                    </div>
+
+                                                    <!--end: Form Actions -->
+                                                </form>
+
+                                                <!--end: Form Wizard Form-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end:: Content -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- begin:: Footer -->
+            <div th:replace="fragments :: footer"></div>
+            <!-- end:: Footer -->
+        </div>
+    </div>
+</div>
+
+<!-- end:: Page -->
+<th:block th:insert="fragments :: body/script"></th:block>
+<script th:src="@{/js/pages/crud/forms/widgets/form-repeater.js}" type="text/javascript"></script>
+<script th:src="@{/js/pages/crud/forms/editors/summernote.js}" type="text/javascript"></script>
+<script th:src="@{/js/pages/crud/forms/widgets/select2.js}" type="text/javascript"></script>
+<script th:src="@{/js/pages/custom/wizard/wizard-4.js}" type="text/javascript"></script>
+<script th:src="@{/js/pages/crud/metronic-datatable/advanced/modal.js}" type="text/javascript"></script>
+<script th:inline="javascript">
+    let url = /*[[@{/member}]]*/;
+    let endTime = /*[[${quiz?.endTime}]]*/
+    $(function() {
+        /* Submit button */
+        $('#kt_form').on('click', "#submitQuiz", function(e) {
+            e.preventDefault();
+            let quizId = $('#quizId').val();
+            let userId = $('#userId').val();
+            let questionId = $.map($('#kt_form .questionId'), function(e) {
+                return e.value;
+            })
+            let map = {};
+            $.each(questionId, function(i, id) {
+                let answer = $('input:radio[name=question_' + id + ']:checked').val();
+                if (answer === undefined) {
+                    map[questionId[i]] = 0;
+                } else {
+                    map[questionId[i]] = answer;
+                }
+            })
+            let data = {
+                quizId : quizId,
+                userId : userId,
+                answerOfUser : map
+            }
+            $.ajax({
+                url: url + '/submitQuiz',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(data),
+                success: function (result) {
+                    console.log(result)
+                    let message = "";
+                    if (result >= 80.0) {
+                        message = "PERFECT";
+                    } else if (result >= 50.0) {
+                        message = "GOOD JOB";
+                    } else {
+                        message = "TRY AGAIN";
+                    }
+                    $('#swal2-content').addClass("font-weight-bold display-3 text-danger").html(parseFloat(result).toFixed(2))
+                    $('#swal2-content').append("<div class='font-weight-bold display-3 text-success'>" + message + "</div>");
+                    $('#swal2-content').parents('div').find('.swal2-confirm').attr('id', 'btn-confirm');
+
+                    $('#btn-confirm').on('click', function() {
+                        window.location.href = 'http://localhost:8080/quiz/index';
+                    })
+
+                    window.setTimeout(function() {
+                        $('#btn-confirm').click();
+                    }, 3000)
+
+                }
+            })
+        });
+
+        /* add active class for paging button */
+        $('#btn-linked li').click(function() {
+            $(this).addClass("kt-pagination__link--active");
+            $("#btn-linked li").not(this).removeClass("kt-pagination__link--active");
+        })
+
+        /* Countdown time and submit form if it's out of time */
+        $('#clock').countdown(moment(endTime).format('YYYY/MM/DD HH:mm:ss.SSS')).on('update.countdown', function(event) {
+                let format = '%H:%M:%S';
+                if (event.offset.totalDays > 0) {
+                    format = '%-d day%!d ' + format;
+                }
+                if (event.offset.weeks > 0) {
+                    format = '%-w week%!w ' + format;
+                }
+                $(this).html(event.strftime(format));
+            })
+            .on('finish.countdown', function(event) {
+                $(this).html('The Quiz has expired!').parent().addClass('disabled');
+                window.setTimeout(function() {
+                    $('#submitQuiz').click();
+                }, 1000)
+
+            });
+        /* next and previous button to add class 'active' */
+        $('#next, #previous').on('click', function() {
+            let current = $(this).parents('div').find('[data-ktwizard-state="current"]').find('input[type=hidden]').val()
+            $('#btn-linked li').removeClass("kt-pagination__link--active")
+            $('#btn-linked').find("[data-id='" + current + "']").addClass("kt-pagination__link--active");
+        })
+    })
+</script>
+</body>
+
+<!-- end::Body -->
+</html>

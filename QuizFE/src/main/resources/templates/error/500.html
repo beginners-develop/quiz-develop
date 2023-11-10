@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:insert="fragments :: head/meta"></th:block>
+    <th:block th:insert="fragments :: head/link"></th:block>
+    <!--begin::Page Custom Styles(used by this page) -->
+    <link th:href="@{/css/pages/error/error-1.css}" rel="stylesheet" type="text/css" />
+    <!--end::Page Custom Styles -->
+    <title>500 | Internal Server Error</title>
+</head>
+<body th:style="'background-image: url(' + @{/media/demos/demo8/bg-1.jpg} + ');'"
+      class="kt-quick-panel--right kt-demo-panel--right kt-offcanvas-panel--right kt-header--fixed kt-header-mobile--fixed kt-subheader--enabled kt-subheader--transparent kt-page--loading">
+
+<!-- begin:: Page -->
+<div class="kt-grid kt-grid--ver kt-grid--root kt-page">
+    <div class="kt-grid__item kt-grid__item--fluid kt-grid  kt-error-v1" th:style="'background-image: url(' + @{/media/error/bg1.jpg} + ');'">
+        <div class="kt-error_container">
+            <div class="kt-error-v1__container">
+                <h1 class="kt-error-v1__number">500</h1>
+                <p class="kt-error-v1__desc">
+                    OOPS! Something went wrong here.<br>
+                    Internal Server Error!
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end:: Page -->
+<th:block th:insert="fragments :: body/script"></th:block>
+<script>
+    window.setTimeout(function() {
+        window.location.href = "http://localhost:8080/quiz/index";
+    }, 3000)
+</script>
+</body>
+</html>

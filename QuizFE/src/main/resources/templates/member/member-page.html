@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- MomentJS using for parse DateTime -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.min.js"></script>
+
+    <!-- font awesome 4.7.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Member Page</title>
+</head>
+<body>
+<div class="box">
+    <!--<form th:action="@{/member/save}" method="POST" th:object="${memberObject}" enctype="multipart/form-data">
+        <div class="form-group">
+            <img class="rounded-circle" height="150px" width="150px"
+                 th:if="${memberObject?.avatar eq null}"
+                 th:src="@{/image/default_avatar.png}">
+            <img class="rounded-circle" height="150px" width="150px" id="preview"
+                 th:unless="${memberObject?.avatar eq null}"
+                 th:src="'data:image/jpeg;base64,' + ${memberObject?.convertImageToString()}">
+            <input type="file" name="inputAvatar" id="avatar" accept="image/*">
+        </div>
+        <input type="hidden" name="id" id="id" th:field="*{id}">
+        <div class="form-group">
+            <button class="btn btn-outline-success" type="submit">Save</button>
+        </div>
+    </form>-->
+    <h1>Demo filter</h1>
+</div>
+<script>
+    avatar.onchange = event => {
+        const [file] = avatar.files
+        if (file) {
+            preview.src = URL.createObjectURL(file);
+        }
+    }
+</script>
+</body>
+</html>
