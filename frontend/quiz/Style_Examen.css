@@ -1,0 +1,43 @@
+body{
+    background-color: rgb(193, 194, 179);
+}
+/*  Examen  */
+#kk{
+    color:blueviolet;
+    text-align: center;
+}
+#jj{
+    color:rgb(188, 23, 8);
+   
+}
+#But{
+    color:blueviolet;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: rgb(229, 229, 239);
+}
+#But button{
+    background-color: brown;
+    color: rgb(229, 229, 239);
+    width: 200px;
+    height:40px ;
+}
+#But button:active{
+    background-color: rgb(61, 165, 42);
+    color: rgb(8, 22, 8);
+}
+
+
+/*  Correction Examen  */
+.cor{
+    color: rgb(101, 165, 42);
+}
+
+.question-note{
+    color: rgb(104, 104, 104);
+    font-size: small;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}

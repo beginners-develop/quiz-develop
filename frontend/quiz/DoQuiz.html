@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style_Examen.css">
+    <title>Examen</title>
+</head>
+
+<body>
+    <script>
+        function Corrige() {
+            var Q1 = "How are you?";
+            var Q2 = "How are you?";
+            var Q3 = "How are you?";
+            if ((document.getElementById('Q11').checked == false) && (document.getElementById('Q12').checked == false) && (document.getElementById('Q13').checked == true) && (document.getElementById('Q14').checked == false)) {
+                Q1 = "The answer to question 1 is correct";
+            }
+            if ((document.getElementById('Q21').checked == true) && (document.getElementById('Q22').checked == false) && (document.getElementById('Q23').checked == false) && (document.getElementById('Q24').checked == false)) {
+                Q2 = "The answer to question 2 is correct";
+            }
+            if ((document.getElementById('Q31').checked == false) && (document.getElementById('Q32').checked == true) && (document.getElementById('Q33').checked == false) && (document.getElementById('Q34').checked == true) && (document.getElementById('Q35').checked == false)) {
+                Q3 = "The answer to question 3 is correct";
+            }
+            alert(Q1 + "\n" + Q2 + "\n" + Q3);
+        }
+        function vider() {
+            document.getElementById('Q11').checked = false;
+            document.getElementById('Q12').checked = false;
+            document.getElementById('Q13').checked = false;
+            document.getElementById('Q14').checked = false;
+            document.getElementById('Q21').checked = false;
+            document.getElementById('Q22').checked = false;
+            document.getElementById('Q23').checked = false;
+            document.getElementById('Q24').checked = false;
+            document.getElementById('Q31').checked = false;
+            document.getElementById('Q32').checked = false;
+            document.getElementById('Q33').checked = false;
+            document.getElementById('Q34').checked = false;
+            document.getElementById('Q35').checked = false;
+        }
+    </script>
+    <fieldset>
+        <legend>
+            <h4>TEST</h4>
+        </legend>
+        <h1 id="kk">The use of RAID1 and RAID5 Self-Assessment Testing
+        </h1>
+        <hr>
+        <h4 id="jj">Questionnaire in the form of MCQs, the questions may have one or more correct answers.
+        </h4>
+        <h4>Question 1 :</h4>
+
+        <p>What type of system disk makes an exact copy of all data on a disk partition
+            in another partition?</p>
+        <ul>
+            <li><input type="Radio" id="Q11"> RAID.</li>
+            <li><input type="Radio" id="Q12"> Sauvegarde disque.</li>
+            <li><input type="Radio" id="Q13"> Mise en miroir.</li>
+            <li><input type="Radio" id="Q14"> Dépannage à chaud.</li>
+        </ul>
+        <h4>Question 2 :</h4>
+        <p>What is the type of system disk which uses 3 to 32 physical disks and is also known as
+            RAID5?</p>
+        <ul>
+            <li><input type="radio" id="Q21"> Agrégats par bandes avec parité.</li>
+            <li><input type="radio" id="Q22"> Agrégats par bandes sans parité.</li>
+            <li><input type="radio" id="Q23"> Disques en miroir.</li>
+            <li><input type="radio" id="Q24"> Agrégats par bandes avec parité répétitives.</li>
+        </ul>
+        <h4>Question 3 :</h4>
+        <p>What types of disks provide fault tolerance?</p>
+        <p class="question-note">Select 1 or more answers        </p>
+        <ul>
+            <li><input type="checkbox" id="Q31"> Les Agrégats de partition.</li>
+            <li><input type="checkbox" id="Q32"> Les Agrégats par bandes avec parité.</li>
+            <li><input type="checkbox" id="Q34"> Les disques en miroir.</li>
+            <li><input type="checkbox" id="Q35"> RAID de niveau 0.</li>
+        </ul>
+
+        <div id="But">
+            <a href="ListQuiz.html"><button>List Quiz</button></a>
+            <button onclick="vider()">Remove answer</button>
+            <button onclick="Corrige()">Submit</button>
+        </div>
+    </fieldset>
+</body>
+
+</html>
