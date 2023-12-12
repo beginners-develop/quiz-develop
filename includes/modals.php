@@ -4,7 +4,7 @@
    <form class="refreshFrm" id="addFeebacks" method="post">
      <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Submit Feedbacks</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Xác nhận Feedbacks</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -17,7 +17,7 @@
                $selMe = $conn->query("SELECT * FROM examinee_tbl WHERE exmne_id='$exmneId' ")->fetch(PDO::FETCH_ASSOC);
              ?>
             <input type="radio" name="asMe" value="<?php echo $selMe['exmne_fullname']; ?>"> <?php echo $selMe['exmne_fullname']; ?> <br>
-            <input type="radio" name="asMe" value="Anonymous"> Anonymous
+            <input type="radio" name="asMe" value="Anonymous"> Ẩn danh
             
           </div>
           <div class="form-group">
@@ -26,8 +26,8 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Add Now</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+        <button type="submit" class="btn btn-primary">Thêm ngay</button>
       </div>
     </div>
    </form>

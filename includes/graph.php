@@ -4,11 +4,11 @@
                                     <div class="card-header-tab card-header-tab-animation card-header">
                                         <div class="card-header-title">
                                             <i class="header-icon lnr-apartment icon-gradient bg-love-kiss"> </i>
-                                            Sales Report
+                                            Báo cáo bán hàng
                                         </div>
                                         <ul class="nav">
-                                            <li class="nav-item"><a href="javascript:void(0);" class="active nav-link">Last</a></li>
-                                            <li class="nav-item"><a href="javascript:void(0);" class="nav-link second-tab-toggle">Current</a></li>
+                                            <li class="nav-item"><a href="javascript:void(0);" class="active nav-link">Cũ</a></li>
+                                            <li class="nav-item"><a href="javascript:void(0);" class="nav-link second-tab-toggle">Hiện tại</a></li>
                                         </ul>
                                     </div>
                                     <div class="card-body">
@@ -21,7 +21,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <h6 class="text-muted text-uppercase font-size-md opacity-5 font-weight-normal">Top Authors</h6>
+                                                <h6 class="text-muted text-uppercase font-size-md opacity-5 font-weight-normal">Top Tác giả</h6>
                                                 <div class="scroll-area-sm">
                                                     <div class="scrollbar-container">
                                                         <ul class="rm-list-borders rm-list-borders-scroll list-group list-group-flush">

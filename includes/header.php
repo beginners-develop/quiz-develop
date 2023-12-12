@@ -67,9 +67,9 @@
                                             <i class="fa fa-angle-down ml-2 opacity-8"></i>
                                         </a>
                                         <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
-                                            <button type="button" tabindex="0" class="dropdown-item">My Account</button>
+                                            <button type="button" tabindex="0" class="dropdown-item">Tài khoản của tôi</button>
                                             <div tabindex="-1" class="dropdown-divider"></div>
-                                            <a href="query/logoutExe.php" class="dropdown-item">LOG OUT</a>
+                                            <a href="query/logoutExe.php" class="dropdown-item">ĐĂNG XUẤT</a>
                                         </div>
                                     </div>
                                 </div>

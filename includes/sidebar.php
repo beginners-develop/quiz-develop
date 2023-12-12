@@ -33,11 +33,11 @@
             <ul class="vertical-nav-menu">
 
          
-                <li class="app-sidebar__heading">AVAILABLE EXAM'S</li>
+                <li class="app-sidebar__heading">BÀI KIỂM TRA CÓ SẴN:</li>
                 <li>
                 <a href="#">
                      <i class="metismenu-icon pe-7s-display2"></i>
-                     All Exam's
+Tất cả bài kiểm tra:
                     <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                 </a>
                 <ul >
@@ -75,7 +75,7 @@
                 </ul>
                 </li>
 
-                 <li class="app-sidebar__heading">TAKEN EXAM'S</li>
+                 <li class="app-sidebar__heading">BÀI KIỂM TRA ĐÃ THỰC HIỆN:</li>
                 <li>
                   <?php 
                     $selTakenExam = $conn->query("SELECT * FROM exam_tbl et INNER JOIN exam_attempt ea ON et.ex_id = ea.exam_id WHERE exmne_id='$exmneId' ORDER BY ea.examat_id  ");
@@ -91,7 +91,7 @@
                     }
                     else
                     { ?>
-                        <a href="#" class="pl-3">You are not taking exam yet</a>
+                        <a href="#" class="pl-3">Bạn vẫn chưa làm bài kiểm tra</a>
                     <?php }
                     
                    ?>
@@ -103,7 +103,7 @@
                 <li class="app-sidebar__heading">FEEDBACKS</li>
                 <li>
                     <a href="#" data-toggle="modal" data-target="#feedbacksModal" >
-                        Add Feedbacks                        
+                        Thêm Feedbacks                        
                     </a>
                 </li>
                 
