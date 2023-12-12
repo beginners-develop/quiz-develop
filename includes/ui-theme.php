@@ -5,7 +5,7 @@
             <div class="theme-settings__inner">
                 <div class="scrollbar-container">
                     <div class="theme-settings__options-wrapper">
-                        <h3 class="themeoptions-heading">Layout Options
+                        <h3 class="themeoptions-heading">Tùy chỉnh layout 
                         </h3>
                         <div class="p-3">
                             <ul class="list-group">
@@ -20,9 +20,9 @@
                                                 </div>
                                             </div>
                                             <div class="widget-content-left">
-                                                <div class="widget-heading">Fixed Header
+                                                <div class="widget-heading">Sửa Header
                                                 </div>
-                                                <div class="widget-subheading">Makes the header top fixed, always visible!
+                                                <div class="widget-subheading">Đảm bảo Header trên cùng được cố định, luôn hiển thị!
                                                 </div>
                                             </div>
                                         </div>
@@ -39,9 +39,9 @@
                                                 </div>
                                             </div>
                                             <div class="widget-content-left">
-                                                <div class="widget-heading">Fixed Sidebar
+                                                <div class="widget-heading">Sửa Sidebar
                                                 </div>
-                                                <div class="widget-subheading">Makes the sidebar left fixed, always visible!
+                                                <div class="widget-subheading">Đảm bảo Sidebar trên cùng được cố định, luôn hiển thị!
                                                 </div>
                                             </div>
                                         </div>
@@ -58,9 +58,9 @@
                                                 </div>
                                             </div>
                                             <div class="widget-content-left">
-                                                <div class="widget-heading">Fixed Footer
+                                                <div class="widget-heading">Sửa Footer
                                                 </div>
-                                                <div class="widget-subheading">Makes the app footer bottom fixed, always visible!
+                                                <div class="widget-subheading">Đảm bảo Footer trên cùng được cố định, luôn hiển thị!
                                                 </div>
                                             </div>
                                         </div>
@@ -70,16 +70,17 @@
                         </div>
                         <h3 class="themeoptions-heading">
                             <div>
-                                Header Options
+                                Tùy chỉnh Header
                             </div>
                             <button type="button" class="btn-pill btn-shadow btn-wide ml-auto btn btn-focus btn-sm switch-header-cs-class" data-class="">
-                                Restore Default
+                                Khôi phục mặc định
                             </button>
                         </h3>
                         <div class="p-3">
                             <ul class="list-group">
                                 <li class="list-group-item">
-                                    <h5 class="pb-2">Choose Color Scheme
+                                    <h5 class="pb-2">Chọn bảng màu
+
                                     </h5>
                                     <div class="theme-settings-swatches">
                                         <div class="swatch-holder bg-primary switch-header-cs-class" data-class="bg-primary header-text-light">
@@ -161,15 +162,16 @@
                             </ul>
                         </div>
                         <h3 class="themeoptions-heading">
-                            <div>Sidebar Options</div>
+                            <div>Tùy chỉnh Sidebar</div>
                             <button type="button" class="btn-pill btn-shadow btn-wide ml-auto btn btn-focus btn-sm switch-sidebar-cs-class" data-class="">
-                                Restore Default
+                                Khôi phục mặc định
                             </button>
                         </h3>
                         <div class="p-3">
                             <ul class="list-group">
                                 <li class="list-group-item">
-                                    <h5 class="pb-2">Choose Color Scheme
+                                    <h5 class="pb-2">Chọn bảng màu
+
                                     </h5>
                                     <div class="theme-settings-swatches">
                                         <div class="swatch-holder bg-primary switch-sidebar-cs-class" data-class="bg-primary sidebar-text-light">
@@ -251,8 +253,8 @@
                             </ul>
                         </div>
                         <h3 class="themeoptions-heading">
-                            <div>Main Content Options</div>
-                            <button type="button" class="btn-pill btn-shadow btn-wide ml-auto active btn btn-focus btn-sm">Restore Default
+                            <div>Tùy chỉnh nội dung chính</div>
+                            <button type="button" class="btn-pill btn-shadow btn-wide ml-auto active btn btn-focus btn-sm">Khôi phục mặc định
                             </button>
                         </h3>
                         <div class="p-3">

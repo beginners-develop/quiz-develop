@@ -103,7 +103,7 @@
             }
             else
             { ?>
-                <b>No question at this moment</b>
+                <b>Không có câu hỏi nào hiện tại</b>
             <?php }
          ?>   
               </table>

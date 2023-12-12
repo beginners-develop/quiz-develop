@@ -2,13 +2,13 @@
 $(document).on("click","#startQuiz", function(){
 	  var thisId = $(this).data('id');
 	  Swal.fire({
-      title: 'Are you sure?',
-      text: 'You want to take this exam now, your time will start automaticaly',
+      title: 'Bắt đầu làm bài',
+      text: 'Thời gian sẽ được đếm ngược từ lúc bạn bắt đầu làm bài và bạn phải nộp bài trước khi hết thời gian. Bạn có chắc chắn muốn bắt đầu làm bài ngay bây giờ?',
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, start now!'
+      confirmButtonText: 'Bắt đầu làm bài'
  }).then((result) => {
   if (result.value) {
          $.ajax({
