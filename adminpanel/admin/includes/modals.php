@@ -4,7 +4,7 @@
    <form class="refreshFrm" id="addCourseFrm" method="post">
      <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Add Course</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Thêm khóa hoc</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -12,14 +12,14 @@
       <div class="modal-body">
         <div class="col-md-12">
           <div class="form-group">
-            <label>Course</label>
-            <input type="" name="course_name" id="course_name" class="form-control" placeholder="Input Course" required="" autocomplete="off">
+            <label>Khóa học</label>
+            <input type="" name="course_name" id="course_name" class="form-control" placeholder="Nhập khóa học" required="" autocomplete="off">
           </div>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Add Now</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+        <button type="submit" class="btn btn-primary">Thêm</button>
       </div>
     </div>
    </form>
