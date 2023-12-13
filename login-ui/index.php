@@ -33,9 +33,9 @@
 						<span class="focus-input100"></span>
 					</div>
 
-					<div class="wrap-input100 validate-input m-b-18" data-validate = "Yêu cầu nhập mặt khẩu hợp lệ">
-						<span class="label-input100">Mặt khẩu</span>
-						<input class="input100" type="password" name="pass" placeholder="Nhập mặt khẩu">
+					<div class="wrap-input100 validate-input m-b-18" data-validate = "Yêu cầu nhập mật khẩu hợp lệ">
+						<span class="label-input100">Mật khẩu</span>
+						<input class="input100" type="password" name="pass" placeholder="Nhập mật khẩu">
 						<span class="focus-input100"></span>
 					</div>
 

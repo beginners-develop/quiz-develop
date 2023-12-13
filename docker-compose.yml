@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  php-apache-environment:
+    container_name: php-apache
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    depends_on:
+      - db
+    volumes:
+      - ./:/var/www/html/
+    ports:
+      - 8000:80
+
+  db:
+    container_name: db
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: true
+      MYSQL_DATABASE: cee_db
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./database/cee_db.sql:/docker-entrypoint-initdb.d/dump.sql
