@@ -145,7 +145,7 @@
         <div class="col-md-12">
           <div class="form-group">
             <label>Họ và tên</label>
-            <input type="" name="fullname" id="fullname" class="form-control" placeholder="Input Fullname" autocomplete="off" required="">
+            <input type="" name="fullname" id="fullname" class="form-control" placeholder="Nhập tên" autocomplete="off" required="">
           </div>
           <div class="form-group">
             <label>Ngày sinh</label>
@@ -219,7 +219,7 @@
           <div class="form-group">
             <label>Câu hỏi</label>
             <input type="hidden" name="examId" value="<?php echo $exId; ?>">
-            <input type="" name="question" id="course_name" class="form-control" placeholder="Input question" autocomplete="off">
+            <input type="" name="question" id="course_name" class="form-control" placeholder="Nhập câu hỏi" autocomplete="off">
           </div>
 
           <fieldset>
