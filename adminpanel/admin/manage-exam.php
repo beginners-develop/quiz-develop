@@ -91,7 +91,7 @@ if(!isset($_SESSION['admin']['adminnakalogin']) == true) header("location:index.
 
                               <div class="form-group">
                                 <!-- <label>Display limit</label> -->
-                                <label>Giới hạn làm bài</label>
+                                <label>Số lượng câu hỏi</label>
                                 <input type="number" name="examQuestDipLimit" class="form-control" value="<?php echo $selExamRow['ex_questlimit_display']; ?>"> 
                               </div>
 
@@ -187,8 +187,8 @@ if(!isset($_SESSION['admin']['adminnakalogin']) == true) header("location:index.
                                                             
                                                         </td>
                                                         <td class="text-center">
-                                                         <a rel="facebox" href="facebox_modal/updateQuestion.php?id=<?php echo $selQuestionRow['eqt_id']; ?>" class="btn btn-sm btn-primary">Update</a>
-                                                         <button type="button" id="deleteQuestion" data-id='<?php echo $selQuestionRow['eqt_id']; ?>'  class="btn btn-danger btn-sm">Delete</button>
+                                                         <a rel="facebox" href="facebox_modal/updateQuestion.php?id=<?php echo $selQuestionRow['eqt_id']; ?>" class="btn btn-sm btn-primary">Sửa</a>
+                                                         <button type="button" id="deleteQuestion" data-id='<?php echo $selQuestionRow['eqt_id']; ?>'  class="btn btn-danger btn-sm">Xóa</button>
                                                         </td>
                                                     </tr>
                                                <?php }

@@ -5,7 +5,7 @@ $(document).on("submit","#examineeLoginFrm", function(){
       {
         Swal.fire(
           'Invalid',
-          'Please input valid email / password',
+          'Hãy nhập đúng email / password',
           'error'
         )
       }
@@ -29,8 +29,8 @@ $(document).on('submit', '#submitAnswerFrm', function(){
   if(examAction != "")
   {
     Swal.fire({
-    title: 'Time Out',
-    text: "your time is over, please click ok",
+    title: 'Hết giờ',
+    text: "Đã hết thời gian làm bài, ấn OK để tiếp tục",
     icon: 'warning',
     showCancelButton: false,
     allowOutsideClick: false,
@@ -45,16 +45,16 @@ if (result.value) {
     if(data.res == "alreadyTaken")
     {
        Swal.fire(
-         'Already Taken',
-         "you already take this exam",
+        'Không được phép',
+        "Bạn đã làm bài kiểm tra này rồi",
          'error'
        ) 
     }
     else if(data.res == "success")
     {
         Swal.fire({
-            title: 'Success',
-            text: "your answer successfully submitted!",
+            title: 'Thành công',
+            text: "Bạn đã nộp bài thành công!",
             icon: 'success',
             allowOutsideClick: false,
             confirmButtonColor: '#3085d6',
@@ -103,16 +103,16 @@ if (result.value) {
     if(data.res == "alreadyTaken")
     {
        Swal.fire(
-         'Already Taken',
-         "you already take this exam",
+         'Không được phép',
+         "Bạn đã làm bài kiểm tra này rồi",
          'error'
        ) 
     }
     else if(data.res == "success")
     {
         Swal.fire({
-            title: 'Success',
-            text: "your answer successfully submitted!",
+            title: 'Thành công',
+            text: "Bạn đã nộp bài thành công",
             icon: 'success',
             allowOutsideClick: false,
             confirmButtonColor: '#3085d6',

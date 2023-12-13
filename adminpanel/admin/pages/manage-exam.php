@@ -20,7 +20,7 @@
                                 <th class="text-left ">Khóa học</th>
                                 <th class="text-left ">Mô tả</th>
                                 <th class="text-left ">thời gian làm bài</th>  
-                                <th class="text-left ">Số lần làm bài</th>  
+                                <th class="text-left ">Số lượng câu hỏi</th>  
                                 <th class="text-center" width="20%">Hành động</th>
                             </tr>
                             </thead>

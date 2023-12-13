@@ -32,15 +32,15 @@ CREATE TABLE `admin_acc` (
   `admin_id` int(11) NOT NULL,
   `admin_user` varchar(1000) NOT NULL,
   `admin_pass` varchar(1000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `admin_acc`
 --
 
 INSERT INTO `admin_acc` (`admin_id`, `admin_user`, `admin_pass`) VALUES
-(1, 'admin@username', 'admin@password');
-
+(1, 'admin@username', 'admin@password'),
+(2, 'admin', '123456');
 -- --------------------------------------------------------
 
 --
@@ -51,7 +51,7 @@ CREATE TABLE `course_tbl` (
   `cou_id` int(11) NOT NULL,
   `cou_name` varchar(1000) NOT NULL,
   `cou_created` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `course_tbl`
@@ -78,7 +78,7 @@ CREATE TABLE `examinee_tbl` (
   `exmne_email` varchar(1000) NOT NULL,
   `exmne_password` varchar(1000) NOT NULL,
   `exmne_status` varchar(1000) NOT NULL DEFAULT 'active'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `examinee_tbl`
@@ -105,7 +105,7 @@ CREATE TABLE `exam_answers` (
   `exans_answer` varchar(1000) NOT NULL,
   `exans_status` varchar(1000) NOT NULL DEFAULT 'new',
   `exans_created` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `exam_answers`
@@ -150,7 +150,7 @@ CREATE TABLE `exam_attempt` (
   `exmne_id` int(11) NOT NULL,
   `exam_id` int(11) NOT NULL,
   `examat_status` varchar(1000) NOT NULL DEFAULT 'used'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `exam_attempt`
@@ -178,7 +178,7 @@ CREATE TABLE `exam_question_tbl` (
   `exam_ch4` varchar(1000) NOT NULL,
   `exam_answer` varchar(1000) NOT NULL,
   `exam_status` varchar(1000) NOT NULL DEFAULT 'active'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `exam_question_tbl`
@@ -217,7 +217,7 @@ CREATE TABLE `exam_tbl` (
   `ex_questlimit_display` int(11) NOT NULL,
   `ex_description` varchar(1000) NOT NULL,
   `ex_created` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `exam_tbl`
@@ -240,7 +240,7 @@ CREATE TABLE `feedbacks_tbl` (
   `fb_exmne_as` varchar(1000) NOT NULL,
   `fb_feedbacks` varchar(1000) NOT NULL,
   `fb_date` varchar(1000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `feedbacks_tbl`

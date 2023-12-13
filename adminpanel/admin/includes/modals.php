@@ -103,7 +103,7 @@
           </div>
 
           <div class="form-group">
-            <label>Số lần làm bài</label>
+            <label>Số lượng câu hỏi</label>
             <input type="number" name="examQuestDipLimit" id="" class="form-control" placeholder="Nhập số lần làm bài">
           </div>
 
@@ -208,7 +208,7 @@
    <form class="refreshFrm" id="addQuestionFrm" method="post">
      <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Add Question for <br><?php echo $selExamRow['ex_title']; ?></h5>
+        <h5 class="modal-title" id="exampleModalLabel">Thêm câu hỏi cho <br><?php echo $selExamRow['ex_title']; ?></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -217,43 +217,43 @@
       <div class="modal-body">
         <div class="col-md-12">
           <div class="form-group">
-            <label>Question</label>
+            <label>Câu hỏi</label>
             <input type="hidden" name="examId" value="<?php echo $exId; ?>">
             <input type="" name="question" id="course_name" class="form-control" placeholder="Input question" autocomplete="off">
           </div>
 
           <fieldset>
-            <legend>Input word for choice's</legend>
+            <legend>Danh sách câu trả lời</legend>
             <div class="form-group">
-                <label>Choice A</label>
-                <input type="" name="choice_A" id="choice_A" class="form-control" placeholder="Input choice A" autocomplete="off">
+                <label>Đáp án A</label>
+                <input type="" name="choice_A" id="choice_A" class="form-control" placeholder="Nhập đáp án A" autocomplete="off">
             </div>
 
             <div class="form-group">
-                <label>Choice B</label>
-                <input type="" name="choice_B" id="choice_B" class="form-control" placeholder="Input choice B" autocomplete="off">
+                <label>Đáp án B</label>
+                <input type="" name="choice_B" id="choice_B" class="form-control" placeholder="Nhập đáp án B" autocomplete="off">
             </div>
 
             <div class="form-group">
-                <label>Choice C</label>
-                <input type="" name="choice_C" id="choice_C" class="form-control" placeholder="Input choice C" autocomplete="off">
+                <label>Đáp án C</label>
+                <input type="" name="choice_C" id="choice_C" class="form-control" placeholder="Nhập đáp án C" autocomplete="off">
             </div>
 
             <div class="form-group">
-                <label>Choice D</label>
-                <input type="" name="choice_D" id="choice_D" class="form-control" placeholder="Input choice D" autocomplete="off">
+                <label>Đáp án D</label>
+                <input type="" name="choice_D" id="choice_D" class="form-control" placeholder="Nhập đáp án D" autocomplete="off">
             </div>
 
             <div class="form-group">
-                <label>Correct Answer</label>
-                <input type="" name="correctAnswer" id="" class="form-control" placeholder="Input correct answer" autocomplete="off">
+                <label>Đáp án đúng</label>
+                <input type="" name="correctAnswer" id="" class="form-control" placeholder="Nhập đáp án đúng" autocomplete="off">
             </div>
           </fieldset>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Add Now</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+        <button type="submit" class="btn btn-primary">Thêm câu hỏi</button>
       </div>
       </form>
     </div>
