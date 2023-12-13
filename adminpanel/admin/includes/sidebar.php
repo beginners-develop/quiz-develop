@@ -104,14 +104,14 @@
                        </a>
                    </li> -->
 
-
+                   <!--
                    <li class="app-sidebar__heading">REPORTS</li>
                    <li>
                        <a href="home.php?page=examinee-result">
                            <i class="metismenu-icon pe-7s-cup">
                            </i>Examinee Result
                        </a>
-                   </li>
+                   </li> -->
 
 
                    <li class="app-sidebar__heading">FEEDBACKS</li>

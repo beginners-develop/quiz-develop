@@ -28,11 +28,12 @@
                 </span>
             </button>
         </span>
-    </div>    <div class="scrollbar-sidebar">
+    </div>
+    <div class="scrollbar-sidebar">
         <div class="app-sidebar__inner">
             <ul class="vertical-nav-menu">
 
-         
+
                 <li class="app-sidebar__heading">BÀI KIỂM TRA:</li>
                 <!-- <li>
                 <a href="#">
@@ -41,73 +42,63 @@ Tất cả bài kiểm tra:
                     <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                 </a>
                 <ul > -->
-                    <?php 
-                        
-                        if($selExam->rowCount() > 0)
-                        {
-                            while ($selExamRow = $selExam->fetch(PDO::FETCH_ASSOC)) { ?>
-                                 <li>
-                                 <a href="#" id="startQuiz" data-id="<?php echo $selExamRow['ex_id']; ?>"  >
-                                    <?php 
-                                        $lenthOfTxt = strlen($selExamRow['ex_title']);
-                                        if($lenthOfTxt >= 23)
-                                        { ?>
-                                            <?php echo substr($selExamRow['ex_title'], 0, 20);?>.....
-                                        <?php }
-                                        else
-                                        {
-                                            echo $selExamRow['ex_title'];
-                                        }
-                                     ?>
-                                 </a>
-                                 </li>
-                            <?php }
-                        }
-                        else
-                        { ?>
-                            <a href="#">
-                                <i class="metismenu-icon"></i>No Exam's @ the moment
+                <?php
+
+                if ($selExam->rowCount() > 0) {
+                    while ($selExamRow = $selExam->fetch(PDO::FETCH_ASSOC)) { ?>
+                        <li>
+                            <a href="#" id="startQuiz" data-id="<?php echo $selExamRow['ex_id']; ?>">
+                                <?php
+                                $lenthOfTxt = strlen($selExamRow['ex_title']);
+                                if ($lenthOfTxt >= 23) { ?>
+                                    <?php echo substr($selExamRow['ex_title'], 0, 20); ?>.....
+                                <?php } else {
+                                    echo $selExamRow['ex_title'];
+                                }
+                                ?>
                             </a>
-                        <?php }
-                     ?>
+                        </li>
+                    <?php }
+                } else { ?>
+                    <a href="#">
+                        <i class="metismenu-icon"></i>No Exam's @ the moment
+                    </a>
+                <?php }
+                ?>
 
 
                 <!-- </ul>
                 </li> -->
 
-                 <li class="app-sidebar__heading">BÀI KIỂM TRA ĐÃ THỰC HIỆN:</li>
+                <li class="app-sidebar__heading">BÀI KIỂM TRA ĐÃ THỰC HIỆN:</li>
                 <li>
-                  <?php 
+                    <?php
                     $selTakenExam = $conn->query("SELECT * FROM exam_tbl et INNER JOIN exam_attempt ea ON et.ex_id = ea.exam_id WHERE exmne_id='$exmneId' ORDER BY ea.examat_id  ");
 
-                    if($selTakenExam->rowCount() > 0)
-                    {
+                    if ($selTakenExam->rowCount() > 0) {
                         while ($selTakenExamRow = $selTakenExam->fetch(PDO::FETCH_ASSOC)) { ?>
-                            <a href="home.php?page=result&id=<?php echo $selTakenExamRow['ex_id']; ?>" >
-                               
+                            <a href="home.php?page=result&id=<?php echo $selTakenExamRow['ex_id']; ?>">
+
                                 <?php echo $selTakenExamRow['ex_title']; ?>
                             </a>
                         <?php }
-                    }
-                    else
-                    { ?>
+                    } else { ?>
                         <a href="#" class="pl-3">Bạn vẫn chưa làm bài kiểm tra</a>
                     <?php }
-                    
-                   ?>
 
-                    
+                    ?>
+
+
                 </li>
 
-
-                <!-- <li class="app-sidebar__heading">FEEDBACKS</li>
+                <li class="app-sidebar__heading">FEEDBACKS</li>
                 <li>
-                    <a href="#" data-toggle="modal" data-target="#feedbacksModal" >
-                        Thêm Feedbacks                        
+                    <a href="#" data-toggle="modal" data-target="#feedbacksModal">
+                        Thêm Feedbacks
                     </a>
-                </li> -->
-                
+                </li>
+
             </ul>
         </div>
     </div>
-</div>  
+</div>
