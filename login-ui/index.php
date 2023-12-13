@@ -30,6 +30,7 @@
 					<div class="wrap-input100 validate-input m-b-26" data-validate="Yêu cầu nhập email hợp lệ">
 						<span class="label-input100">Email</span>
 						<input class="input100" type="text" name="username" placeholder="Nhập email">
+						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input m-b-18" data-validate = "Yêu cầu nhập mặt khẩu hợp lệ">
