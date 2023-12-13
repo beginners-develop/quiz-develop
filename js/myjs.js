@@ -21,8 +21,8 @@ $(document).on("click","#startQuiz", function(){
             if(data.res == "alreadyExam")
             {
               Swal.fire(
-                'Already Taken ',
-                'you already take this exam',
+                'Không được phép',
+                'Bạn đã làm bài kiểm tra này rồi',
                 'error'
               )
             }

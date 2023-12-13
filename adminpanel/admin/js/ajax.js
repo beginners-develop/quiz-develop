@@ -55,8 +55,8 @@ $(document).on("submit","#updateCourseFrm" , function(){
      if(data.res == "success")
      {
         Swal.fire(
-            'Success',
-            'Selected course has been successfully updated!',
+            'Thành công',
+            'Khóa học đã được cập nhật!',
             'success'
           )
           refreshDiv();
@@ -80,8 +80,8 @@ $(document).on("click", "#deleteCourse", function(e){
         if(data.res == "success")
         {
           Swal.fire(
-            'Success',
-            'Selected Course successfully deleted',
+            'Thành công',
+            'Xóa khóa học thành công',
             'success'
           )
           refreshDiv();
@@ -113,8 +113,8 @@ $(document).on("click", "#deleteExam", function(e){
         if(data.res == "success")
         {
           Swal.fire(
-            'Success',
-            'Selected Course successfully deleted',
+            'Thành công',
+            'Xóa bài kiểm tra thành công',
             'success'
           )
           refreshDiv();
@@ -172,8 +172,8 @@ $(document).on("submit","#addExamFrm" , function(){
     else if(data.res == "success")
     {
       Swal.fire(
-        'Success',
-        data.examTitle.toUpperCase() + '<br>Successfully Added',
+        'Thành công',
+        data.examTitle.toUpperCase() + '<br>thêm thành công',
         'success'
       )
           $('#addExamFrm')[0].reset();
@@ -192,8 +192,8 @@ $(document).on("submit","#updateExamFrm" , function(){
     if(data.res == "success")
     {
       Swal.fire(
-          'Update Successfully',
-          data.msg + ' <br>are now successfully updated',
+          'Cập nhật thành công',
+          data.msg + ' <br>được cập nhật thành công',
           'success'
        )
           refreshDiv();
@@ -217,8 +217,8 @@ $(document).on("submit","#updateQuestionFrm" , function(){
      if(data.res == "success")
      {
         Swal.fire(
-            'Success',
-            'Selected question has been successfully updated!',
+            'Thành công',
+            'Câu hỏi đã được cập nhật!',
             'success'
           )
           refreshDiv();
@@ -242,8 +242,8 @@ $(document).on("click", "#deleteQuestion", function(e){
         if(data.res == "success")
         {
           Swal.fire(
-            'Deleted Success',
-            'Selected question successfully deleted',
+            'Xóa thành công',
+            'Câu hỏi đã xóa thành công',
             'success'
           )
           refreshDiv();
@@ -275,8 +275,8 @@ $(document).on("submit","#addQuestionFrm" , function(){
     else if(data.res == "success")
     {
       Swal.fire(
-        'Success',
-         data.msg + ' question <br>Successfully added',
+        'Thành công',
+         data.msg + ' câu hỏi <br> thêm thành công',
         'success'
       )
         $('#addQuestionFrm')[0].reset();
@@ -364,8 +364,8 @@ $(document).on("submit","#updateExamineeFrm" , function(){
      if(data.res == "success")
      {
         Swal.fire(
-            'Success',
-            data.exFullname + ' <br>has been successfully updated!',
+            'Thành công',
+            data.exFullname + ' <br>cập nhật thành công!',
             'success'
           )
           refreshDiv();

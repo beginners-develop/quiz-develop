@@ -10,7 +10,7 @@ if(!isset($_SESSION['examineeSession']['examineenakalogin']) == true) header("lo
 <?php include("includes/header.php"); ?>      
 
 <!-- UI THEME DIRI -->
-<?php include("includes/ui-theme.php"); ?>
+<!-- <?php include("includes/ui-theme.php"); ?> -->
 
 <div class="app-main">
 <!-- sidebar diri  -->
