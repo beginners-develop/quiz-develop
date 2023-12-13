@@ -3,25 +3,25 @@
             <div class="app-page-title">
                 <div class="page-title-wrapper">
                     <div class="page-title-heading">
-                        <div>MANAGE EXAM</div>
+                        <div>QUẢN LÍ BÀI KIỂM TRA</div>
                     </div>
                 </div>
             </div>        
             
             <div class="col-md-12">
                 <div class="main-card mb-3 card">
-                    <div class="card-header">ExAM List
+                    <div class="card-header">Danh sách bài kiểm tra
                     </div>
                     <div class="table-responsive">
                         <table class="align-middle mb-0 table table-borderless table-striped table-hover" id="tableList">
                             <thead>
                             <tr>
-                                <th class="text-left pl-4">Exam Title</th>
-                                <th class="text-left ">Course</th>
-                                <th class="text-left ">Description</th>
-                                <th class="text-left ">Time limit</th>  
-                                <th class="text-left ">Display limit</th>  
-                                <th class="text-center" width="20%">Action</th>
+                                <th class="text-left pl-4">Tên bài kiểm tra</th>
+                                <th class="text-left ">Khóa học</th>
+                                <th class="text-left ">Mô tả</th>
+                                <th class="text-left ">thời gian làm bài</th>  
+                                <th class="text-left ">Số lần làm bài</th>  
+                                <th class="text-center" width="20%">Hành động</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -45,8 +45,8 @@
                                             <td><?php echo $selExamRow['ex_time_limit']; ?></td>
                                             <td><?php echo $selExamRow['ex_questlimit_display']; ?></td>
                                             <td class="text-center">
-                                             <a href="manage-exam.php?id=<?php echo $selExamRow['ex_id']; ?>" type="button" class="btn btn-primary btn-sm">Manage</a>
-                                             <button type="button" id="deleteExam" data-id='<?php echo $selExamRow['ex_id']; ?>'  class="btn btn-danger btn-sm">Delete</button>
+                                             <a href="manage-exam.php?id=<?php echo $selExamRow['ex_id']; ?>" type="button" class="btn btn-primary btn-sm">Chỉnh sửa</a>
+                                             <button type="button" id="deleteExam" data-id='<?php echo $selExamRow['ex_id']; ?>'  class="btn btn-danger btn-sm">Xóa</button>
                                             </td>
                                         </tr>
 
@@ -56,7 +56,7 @@
                                 { ?>
                                     <tr>
                                       <td colspan="5">
-                                        <h3 class="p-3">No Exam Found</h3>
+                                        <h3 class="p-3">Không tìm thấy bài kiểm tra</h3>
                                       </td>
                                     </tr>
                                 <?php }

@@ -4,27 +4,27 @@
             <div class="app-page-title">
                 <div class="page-title-wrapper">
                     <div class="page-title-heading">
-                        <div>MANAGE EXAMINEE</div>
+                        <div>QUẢN LÍ HỌC VIÊN</div>
                     </div>
                 </div>
             </div>        
             
             <div class="col-md-12">
                 <div class="main-card mb-3 card">
-                    <div class="card-header">Examinee List
+                    <div class="card-header">Danh sách học viên
                     </div>
                     <div class="table-responsive">
                         <table class="align-middle mb-0 table table-borderless table-striped table-hover" id="tableList">
                             <thead>
                             <tr>
-                                <th>Fullname</th>
-                                <th>Gender</th>
-                                <th>Birthdate</th>
-                                <th>Course</th>
-                                <th>Year level</th>
+                                <th>Họ và tên</th>
+                                <th>Giới tính</th>
+                                <th>Ngày sinh</th>
+                                <th>Khóa học</th>
+                                <th>Trình độ</th>
                                 <th>Email</th>
-                                <th>Password</th>
-                                <th>status</th>
+                                <th>Mật khẩu</th>
+                                <th>Trạng thái</th>
                                 <th></th>
                             </tr>
                             </thead>
@@ -50,7 +50,7 @@
                                            <td><?php echo $selExmneRow['exmne_password']; ?></td>
                                            <td><?php echo $selExmneRow['exmne_status']; ?></td>
                                            <td>
-                                               <a rel="facebox" href="facebox_modal/updateExaminee.php?id=<?php echo $selExmneRow['exmne_id']; ?>" class="btn btn-sm btn-primary">Update</a>
+                                               <a rel="facebox" href="facebox_modal/updateExaminee.php?id=<?php echo $selExmneRow['exmne_id']; ?>" class="btn btn-sm btn-primary">Chỉnh sửa</a>
 
                                            </td>
                                         </tr>
@@ -60,7 +60,7 @@
                                 { ?>
                                     <tr>
                                       <td colspan="2">
-                                        <h3 class="p-3">No Course Found</h3>
+                                        <h3 class="p-3">không tìm thấy học viên</h3>
                                       </td>
                                     </tr>
                                 <?php }

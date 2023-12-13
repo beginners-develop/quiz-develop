@@ -62,7 +62,7 @@
    <form class="refreshFrm" id="addExamFrm" method="post">
      <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Add Exam</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Thêm bài kiểm tra</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -70,9 +70,9 @@
       <div class="modal-body">
         <div class="col-md-12">
           <div class="form-group">
-            <label>Select Course</label>
+            <label>Chọn khóa học</label>
             <select class="form-control" name="courseSelected">
-              <option value="0">Select Course</option>
+              <option value="0">Chọn khóa học</option>
               <?php 
                 $selCourse = $conn->query("SELECT * FROM course_tbl ORDER BY cou_id DESC");
                 if($selCourse->rowCount() > 0)
@@ -83,46 +83,46 @@
                 }
                 else
                 { ?>
-                  <option value="0">No Course Found</option>
+                  <option value="0">Không tìm thấy khóa học</option>
                 <?php }
                ?>
             </select>
           </div>
 
           <div class="form-group">
-            <label>Exam Time Limit</label>
+            <label>Thời gian làm bài</label>
             <select class="form-control" name="timeLimit" required="">
-              <option value="0">Select time</option>
-              <option value="10">10 Minutes</option> 
-              <option value="20">20 Minutes</option> 
-              <option value="30">30 Minutes</option> 
-              <option value="40">40 Minutes</option> 
-              <option value="50">50 Minutes</option> 
-              <option value="60">60 Minutes</option> 
+              <option value="0">Chọn thời gian</option>
+              <option value="10">10 phút</option> 
+              <option value="20">20 phút</option> 
+              <option value="30">30 phút</option> 
+              <option value="40">40 phút</option> 
+              <option value="50">50 phút</option> 
+              <option value="60">60 phút</option> 
             </select>
           </div>
 
           <div class="form-group">
-            <label>Question Limit to Display</label>
-            <input type="number" name="examQuestDipLimit" id="" class="form-control" placeholder="Input question limit to display">
+            <label>Số lần làm bài</label>
+            <input type="number" name="examQuestDipLimit" id="" class="form-control" placeholder="Nhập số lần làm bài">
           </div>
 
           <div class="form-group">
-            <label>Exam Title</label>
-            <input type="" name="examTitle" class="form-control" placeholder="Input Exam Title" required="">
+            <label>Tên bài kiểm tra</label>
+            <input type="" name="examTitle" class="form-control" placeholder="Nhập tên bài kiểm tra" required="">
           </div>
 
           <div class="form-group">
-            <label>Exam Description</label>
-            <textarea name="examDesc" class="form-control" rows="4" placeholder="Input Exam Description" required=""></textarea>
+            <label>Mô tả</label>
+            <textarea name="examDesc" class="form-control" rows="4" placeholder="Nhập mô tả" required=""></textarea>
           </div>
 
 
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Add Now</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+        <button type="submit" class="btn btn-primary">Thêm bài kiểm tra</button>
       </div>
     </div>
    </form>
@@ -136,7 +136,7 @@
    <form class="refreshFrm" id="addExamineeFrm" method="post">
      <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Add Examinee</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Thêm học viên</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -144,25 +144,25 @@
       <div class="modal-body">
         <div class="col-md-12">
           <div class="form-group">
-            <label>Fullname</label>
+            <label>Họ và tên</label>
             <input type="" name="fullname" id="fullname" class="form-control" placeholder="Input Fullname" autocomplete="off" required="">
           </div>
           <div class="form-group">
-            <label>Birhdate</label>
+            <label>Ngày sinh</label>
             <input type="date" name="bdate" id="bdate" class="form-control" placeholder="Input Birhdate" autocomplete="off" >
           </div>
           <div class="form-group">
-            <label>Gender</label>
+            <label>Giới tính</label>
             <select class="form-control" name="gender" id="gender">
-              <option value="0">Select gender</option>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
+              <option value="0">Chọn giới tính</option>
+              <option value="male">Nam</option>
+              <option value="female">Nữ</option>
             </select>
           </div>
           <div class="form-group">
-            <label>Course</label>
+            <label>Khóa học</label>
             <select class="form-control" name="course" id="course">
-              <option value="0">Select course</option>
+              <option value="0">Chọn khóa học</option>
               <?php 
                 $selCourse = $conn->query("SELECT * FROM course_tbl ORDER BY cou_id asc");
                 while ($selCourseRow = $selCourse->fetch(PDO::FETCH_ASSOC)) { ?>
@@ -172,28 +172,28 @@
             </select>
           </div>
           <div class="form-group">
-            <label>Year Level</label>
+            <label>Trình độ</label>
             <select class="form-control" name="year_level" id="year_level">
-              <option value="0">Select year level</option>
-              <option value="first year">First Year</option>
-              <option value="second year">Second Year</option>
-              <option value="third year">Third Year</option>
-              <option value="fourth year">Fourth Year</option>
+              <option value="0">Chọn Trình độ</option>
+              <option value="first year">Năm nhất</option>
+              <option value="second year">Năm hai</option>
+              <option value="third year">Năm ba</option>
+              <option value="fourth year">Năm bốn</option>
             </select>
           </div>
           <div class="form-group">
             <label>Email</label>
-            <input type="email" name="email" id="email" class="form-control" placeholder="Input Email" autocomplete="off" required="">
+            <input type="email" name="email" id="email" class="form-control" placeholder="Nhập Email" autocomplete="off" required="">
           </div>
           <div class="form-group">
-            <label>Password</label>
-            <input type="password" name="password" id="password" class="form-control" placeholder="Input Password" autocomplete="off" required="">
+            <label>Mật khẩu</label>
+            <input type="password" name="password" id="password" class="form-control" placeholder="Nhập mật khẩu" autocomplete="off" required="">
           </div>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Add Now</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+        <button type="submit" class="btn btn-primary">Thêm</button>
       </div>
     </div>
    </form>
