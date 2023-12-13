@@ -33,69 +33,69 @@
                             <ul class="vertical-nav-menu">
                                 <li class="app-sidebar__heading"><a href="home.php">Dashboards</a></li>
 
-                                <li class="app-sidebar__heading">MANAGE COURSE</li>
+                                <li class="app-sidebar__heading">QUẢN LÍ KHÓA HỌC</li>
                                 <li>
-                                    <a href="#">
+                                    <!-- <a href="#">
                                          <i class="metismenu-icon pe-7s-display2"></i>
-                                         Course
+                                         Khóa học
                                         <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                     </a>
-                                    <ul>
+                                    <ul> -->
                                         <li>
                                             <a href="#" data-toggle="modal" data-target="#modalForAddCourse">
-                                                <i class="metismenu-icon"></i>
-                                                Add Course
+                                                <i class="metismenu-icon pe-7s-display2"></i>
+                                                Thêm khóa học
                                             </a>
                                         </li>
                                         <li>
                                             <a href="home.php?page=manage-course">
-                                                <i class="metismenu-icon">
-                                                </i>Manage Course
+                                            <i class="metismenu-icon pe-7s-display2"></i>
+                                            Quản lí khóa học
                                             </a>
                                         </li>
                                        
-                                    </ul>
+                                    <!-- </ul> -->
                                 </li>
                                
-                                <li class="app-sidebar__heading">MANAGE EXAM</li>
+                                <li class="app-sidebar__heading">QUẢN LÍ BÀI KIỂM TRA</li>
                                 <li>
-                                    <a href="#">
+                                    <!-- <a href="#">
                                          <i class="metismenu-icon pe-7s-display2"></i>
-                                         Exam
+                                         Bài kiểm tra
                                         <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                                     </a>
-                                    <ul>
+                                    <ul> -->
                                         <li>
                                             <a href="#" data-toggle="modal" data-target="#modalForExam">
-                                                <i class="metismenu-icon"></i>
-                                                Add Exam
+                                                <i class="metismenu-icon pe-7s-display2"></i>
+                                                Thêm bài kiểm tra
                                             </a>
                                         </li>
                                         <li>
                                             <a href="home.php?page=manage-exam">
-                                                <i class="metismenu-icon">
-                                                </i>Manage Exam
+                                            <i class="metismenu-icon pe-7s-display2"></i>
+                                            Quản lí bài kiểm tra
                                             </a>
                                         </li>
                                        
-                                    </ul>
+                                    <!-- </ul> -->
                                 </li>
                            
                          
-                                <li class="app-sidebar__heading">MANAGE EXAMINEE</li>
+                                <li class="app-sidebar__heading">QUẢN LÍ HỌC VIÊN</li>
                                 <li>
                                     <a href="" data-toggle="modal" data-target="#modalForAddExaminee">
                                         <i class="metismenu-icon pe-7s-add-user">
-                                        </i>Add Examinee
+                                        </i>Thêm học viên
                                     </a>
                                 </li>
                                 <li>
                                     <a href="home.php?page=manage-examinee">
                                         <i class="metismenu-icon pe-7s-users">
-                                        </i>Manage Examinee
+                                        </i>Quản lí học viên
                                     </a>
                                 </li>
-                                <li class="app-sidebar__heading">RANKING</li>
+                                <!-- <li class="app-sidebar__heading">RANKING</li>
                                 <li>
                                     <a href="home.php?page=ranking-exam">
                                         <i class="metismenu-icon pe-7s-cup">
@@ -119,7 +119,7 @@
                                         <i class="metismenu-icon pe-7s-chat">
                                         </i>All Feedbacks
                                     </a>
-                                </li>
+                                </li> -->
                                 
                             </ul>
                         </div>

@@ -33,9 +33,9 @@ if(!isset($_SESSION['admin']['adminnakalogin']) == true) header("location:index.
             <div class="app-page-title">
                 <div class="page-title-wrapper">
                      <div class="page-title-heading">
-                        <div> MANAGE EXAM
+                        <div> QUẢN LÍ BÀI KIỂM TRA
                             <div class="page-title-subheading">
-                              Add Question for <?php echo $selExamRow['ex_title']; ?>
+                              Thêm câu hỏi cho <?php echo $selExamRow['ex_title']; ?>
                             </div>
                         </div>
                     </div>
@@ -48,12 +48,12 @@ if(!isset($_SESSION['admin']['adminnakalogin']) == true) header("location:index.
                   <div class="col-md-6">
                       <div class="main-card mb-3 card">
                           <div class="card-header">
-                            <i class="header-icon lnr-license icon-gradient bg-plum-plate"> </i>Exam Information
+                            <i class="header-icon lnr-license icon-gradient bg-plum-plate"> </i>Thông tin bài kiểm tra
                           </div>
                           <div class="card-body">
                            <form method="post" id="updateExamFrm">
                                <div class="form-group">
-                                <label>Course</label>
+                                <label>Khóa học</label>
                                 <select class="form-control" name="courseId" required="">
                                   <option value="<?php echo $selExamRow['cou_id']; ?>"><?php echo $selCourse['courseName']; ?></option>
                                   <?php 
@@ -66,36 +66,37 @@ if(!isset($_SESSION['admin']['adminnakalogin']) == true) header("location:index.
                               </div>
 
                               <div class="form-group">
-                                <label>Exam Title</label>
+                                <label>Tên bài kiểm tra</label>
                                 <input type="hidden" name="examId" value="<?php echo $selExamRow['ex_id']; ?>">
                                 <input type="" name="examTitle" class="form-control" required="" value="<?php echo $selExamRow['ex_title']; ?>">
                               </div>  
 
                               <div class="form-group">
-                                <label>Exam Description</label>
+                                <label>Mô tả</label>
                                 <input type="" name="examDesc" class="form-control" required="" value="<?php echo $selExamRow['ex_description']; ?>">
                               </div>  
 
                               <div class="form-group">
-                                <label>Exam Time limit</label>
+                                <label>Thời gian làm bài</label>
                                 <select class="form-control" name="examLimit" required="">
-                                  <option value="<?php echo $selExamRow['ex_time_limit']; ?>"><?php echo $selExamRow['ex_time_limit']; ?> Minutes</option>
-                                  <option value="10">10 Minutes</option> 
-                                  <option value="20">20 Minutes</option> 
-                                  <option value="30">30 Minutes</option> 
-                                  <option value="40">40 Minutes</option> 
-                                  <option value="50">50 Minutes</option> 
-                                  <option value="60">60 Minutes</option> 
+                                  <option value="<?php echo $selExamRow['ex_time_limit']; ?>"><?php echo $selExamRow['ex_time_limit']; ?> Phút</option>
+                                  <option value="10">10 Phút</option> 
+                                  <option value="20">20 Phút</option> 
+                                  <option value="30">30 Phút</option> 
+                                  <option value="40">40 Phút</option> 
+                                  <option value="50">50 Phút</option> 
+                                  <option value="60">60 Phút</option> 
                                 </select>
                               </div>
 
                               <div class="form-group">
-                                <label>Display limit</label>
+                                <!-- <label>Display limit</label> -->
+                                <label>Giới hạn làm bài</label>
                                 <input type="number" name="examQuestDipLimit" class="form-control" value="<?php echo $selExamRow['ex_questlimit_display']; ?>"> 
                               </div>
 
                               <div class="form-group" align="right">
-                                <button type="submit" class="btn btn-primary btn-lg">Update</button>
+                                <button type="submit" class="btn btn-primary btn-lg">Cập nhật</button>
                               </div> 
                            </form>                           
                           </div>
@@ -107,12 +108,12 @@ if(!isset($_SESSION['admin']['adminnakalogin']) == true) header("location:index.
                         $selQuest = $conn->query("SELECT * FROM exam_question_tbl WHERE exam_id='$exId' ORDER BY eqt_id desc");
                     ?>
                      <div class="main-card mb-3 card">
-                          <div class="card-header"><i class="header-icon lnr-license icon-gradient bg-plum-plate"> </i>Exam Question's 
+                          <div class="card-header"><i class="header-icon lnr-license icon-gradient bg-plum-plate"> </i>Câu hỏi bài kiểm tra 
                             <span class="badge badge-pill badge-primary ml-2">
                               <?php echo $selQuest->rowCount(); ?>
                             </span>
                              <div class="btn-actions-pane-right">
-                                <button class="btn btn-sm btn-primary " data-toggle="modal" data-target="#modalForAddQuestion">Add Question</button>
+                                <button class="btn btn-sm btn-primary " data-toggle="modal" data-target="#modalForAddQuestion">Thêm câu hỏi</button>
                               </div>
                           </div>
                           <div class="card-body" >
@@ -127,8 +128,8 @@ if(!isset($_SESSION['admin']['adminnakalogin']) == true) header("location:index.
                                     <table class="align-middle mb-0 table table-borderless table-striped table-hover" id="tableList">
                                         <thead>
                                         <tr>
-                                            <th class="text-left pl-1">Course Name</th>
-                                            <th class="text-center" width="20%">Action</th>
+                                            <th class="text-left pl-1">Tên khóa học</th>
+                                            <th class="text-center" width="20%">Hành động</th>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -196,7 +197,7 @@ if(!isset($_SESSION['admin']['adminnakalogin']) == true) header("location:index.
                                             { ?>
                                                 <tr>
                                                   <td colspan="2">
-                                                    <h3 class="p-3">No Course Found</h3>
+                                                    <h3 class="p-3">Không tìm thấy khóa học</h3>
                                                   </td>
                                                 </tr>
                                             <?php }
@@ -207,7 +208,7 @@ if(!isset($_SESSION['admin']['adminnakalogin']) == true) header("location:index.
                                <?php }
                                else
                                { ?>
-                                  <h4 class="text-primary">No question found...</h4>
+                                  <p class="text-primary">Không tìm thấy câu hỏi...</p>
                                  <?php
                                }
                              ?>

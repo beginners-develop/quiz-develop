@@ -85,7 +85,7 @@
             </div>
         	</div>
 
-            <div class="col-md-6 float-left">
+            <!-- <div class="col-md-6 float-left">
             <div class="card mb-3 widget-content bg-happy-green">
                 <div class="widget-content-wrapper text-white">
                     <div class="widget-content-left">
@@ -110,7 +110,7 @@
                     </div>
                 </div>
             </div>
-            </div>
+            </div> -->
         </div>
     </div>
 

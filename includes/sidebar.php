@@ -33,14 +33,14 @@
             <ul class="vertical-nav-menu">
 
          
-                <li class="app-sidebar__heading">BÀI KIỂM TRA CÓ SẴN:</li>
-                <li>
+                <li class="app-sidebar__heading">BÀI KIỂM TRA:</li>
+                <!-- <li>
                 <a href="#">
                      <i class="metismenu-icon pe-7s-display2"></i>
 Tất cả bài kiểm tra:
                     <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                 </a>
-                <ul >
+                <ul > -->
                     <?php 
                         
                         if($selExam->rowCount() > 0)
@@ -72,8 +72,8 @@ Tất cả bài kiểm tra:
                      ?>
 
 
-                </ul>
-                </li>
+                <!-- </ul>
+                </li> -->
 
                  <li class="app-sidebar__heading">BÀI KIỂM TRA ĐÃ THỰC HIỆN:</li>
                 <li>
@@ -100,12 +100,12 @@ Tất cả bài kiểm tra:
                 </li>
 
 
-                <li class="app-sidebar__heading">FEEDBACKS</li>
+                <!-- <li class="app-sidebar__heading">FEEDBACKS</li>
                 <li>
                     <a href="#" data-toggle="modal" data-target="#feedbacksModal" >
                         Thêm Feedbacks                        
                     </a>
-                </li>
+                </li> -->
                 
             </ul>
         </div>
