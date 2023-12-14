@@ -4,23 +4,23 @@
             <div class="app-page-title">
                 <div class="page-title-wrapper">
                     <div class="page-title-heading">
-                        <div>EXAMINEE RESULT</div>
+                        <div>KẾT QUẢ CỦA HỌC VIÊN</div>
                     </div>
                 </div>
             </div>        
             
             <div class="col-md-12">
                 <div class="main-card mb-3 card">
-                    <div class="card-header">Examinee Result
+                    <div class="card-header">Kết quả của học viên
                     </div>
                     <div class="table-responsive">
                         <table class="align-middle mb-0 table table-borderless table-striped table-hover" id="tableList">
                             <thead>
                             <tr>
-                                <th>Fullname</th>
-                                <th>Exam Name</th>
-                                <th>Scores</th>
-                                <th>Ratings</th>
+                                <th>Họ tên</th>
+                                <th>Bài kiểm tra</th>
+                                <th>Điểm</th>
+                                <th>Phầm trăm</th>
                                 <!-- <th width="10%"></th> -->
                             </tr>
                             </thead>
@@ -77,7 +77,7 @@
                                 { ?>
                                     <tr>
                                       <td colspan="2">
-                                        <h3 class="p-3">No Course Found</h3>
+                                        <h3 class="p-3">Không tìm thấy thông tin</h3>
                                       </td>
                                     </tr>
                                 <?php }

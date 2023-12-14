@@ -96,6 +96,13 @@
                            </i>Quản lí học viên
                        </a>
                    </li>
+                   <li class="app-sidebar__heading">BÁO CÁO</li>
+                    <li>
+                        <a href="home.php?page=examinee-result">
+                            <i class="metismenu-icon pe-7s-cup">
+                            </i>Kết quả học viên
+                        </a>
+                    </li>
                    <!-- <li class="app-sidebar__heading">RANKING</li>
                    <li>
                        <a href="home.php?page=ranking-exam">
