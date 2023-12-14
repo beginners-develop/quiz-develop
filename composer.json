@@ -10,14 +10,14 @@
   },
   "authors": [
     {
-      "name": "Anton Medvedev",
-      "email": "anton@medv.io"
+      "name": "Nam Tran",
+      "email": "nam.tsrovn@gmail.com"
     }
   ],
   "funding": [
     {
       "type": "github",
-      "url": "https://github.com/sponsors/antonmedv"
+      "url": "https://github.com/beginners-develop/quiz-develop"
     }
   ],
   "autoload": {
